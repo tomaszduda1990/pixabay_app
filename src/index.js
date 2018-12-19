@@ -1,16 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import Navbar from "./components/navbar/Navbar";
+import Search from "./components/search/Search";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <MuiThemeProvider>
+        <div>
+          <Navbar />
+          <Search />
+        </div>
+      </MuiThemeProvider>
+    );
+  }
 }
-
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
